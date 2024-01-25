@@ -503,6 +503,17 @@ img{
     animation: shine 2s infinite;
 }
 
+.sec-title .title2{
+	position:relative;
+	color:rgb(55, 52, 53);
+	font-size: 15px;
+	line-height: 1.6em;
+	font-weight:600;
+	-webkit-mask-image: linear-gradient(-75deg, rgba(255,255,255,0.6) 50%, rgb(55, 52, 53) 50%, rgba(0,0,0,1) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+}
+
 .sec-title h2{
 	position: relative;
     font-size: 30px;
