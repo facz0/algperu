@@ -4035,6 +4035,32 @@ obj-img{
 	display:inline-block;
 }
 
+.alg-container{
+	display: flex;
+	width: 17vw;
+	height: 4vh;
+	position: relative;
+	--clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.alg-container:hover{
+    --clip:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.alg-container-ul{
+	clip-path: var(--clip);
+	height: 10vh;
+	background-color: whitesmoke;
+}
+
+.main-footer .widgets-section .footer-column .alg-container-li-a{
+	color: #111111;
+}
+
+.alg-container-consulta{
+	width: 10vw;
+}
+
 /*News Widget Block*/
 
 .news-widget-block{
