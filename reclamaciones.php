@@ -12,7 +12,7 @@ if(isset($_POST["submit-form"])){
     $texto=$_POST["obs"];
     
     $destinatario="cesarti2022@gmail.com";
-    $asunto="Nuevo mensaje de $email";
+    $asunto="Mensaje from: LIBRO DE RECLAMACIONES";
 
     $contenido="Solicitud: $solicitud \n"; 
     $contenido.="Numero de Orden: $nOrden \n";  

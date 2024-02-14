@@ -1312,7 +1312,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 						
 						<!-- Contact Form -->
 						<div class="contact-form">
-							<form method="post" action="enviar.php" id="contact-form">
+							<form action="contactanos.php" method="post">
 								<div class="row clearfix">
 									
 									<div class="col-lg-6 col-md-6 col-sm-12 form-group">
@@ -1324,7 +1324,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 									</div>
 									
 									<div class="col-lg-6 col-md-6 col-sm-12 form-group">
-										<input type="text" name="subject" placeholder="Compañia:" required>
+										<input type="text" name="company" placeholder="Compañia:" required>
 									</div>
 									
 									<div class="col-lg-6 col-md-6 col-sm-12 form-group">
@@ -1343,6 +1343,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 							</form>
 								
 						</div>
+						<?php include("contactanos.php"); ?>
 						
 					</div>
 				</div>
