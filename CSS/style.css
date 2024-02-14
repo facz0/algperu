@@ -4036,8 +4036,8 @@ obj-img{
 }
 
 .alg-container{
-	display: flex;
-	width: 17vw;
+	display: grid;
+	width: 110px;
 	height: 4vh;
 	position: relative;
 	--clip: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -4050,11 +4050,28 @@ obj-img{
 .alg-container-ul{
 	clip-path: var(--clip);
 	height: 10vh;
-	background-color: whitesmoke;
+	width: 130px;
+	background-color: #373535;
+	margin: 0 0 0 8%;
+	z-index: 1;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	justify-content: center;
+	border: 1px solid white;
+}
+
+.main-footer .widgets-section .footer-column .alg-container-li{
+	margin-bottom: 0;
 }
 
 .main-footer .widgets-section .footer-column .alg-container-li-a{
-	color: #111111;
+	color: #ffffff;
+	font-weight: 400;
+}
+
+.main-footer .widgets-section .footer-column .alg-container-li-a:hover{
+	color: #6b6b6b;
 }
 
 .alg-container-consulta{

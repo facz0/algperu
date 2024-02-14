@@ -1195,7 +1195,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 						
 						<!-- Contact Form -->
 						<div class="contact-form">
-							<form method="post" action="contactanos.php" id="contact-form">
+							<form action="reclamaciones.php" method="POST">
 								<div class="row clearfix">
 									<div class="col-lg-6 col-md-6 col-sm-12 form-group" >
 									<select style="color: rgb(55, 52, 53);" name="solicitud">
@@ -1207,7 +1207,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 									<input style="color: rgb(55, 52, 53);" type="text" name="orden" placeholder="N° Orden: " required>
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-12 form-group">
-									<input style="color: rgb(55, 52, 53);" type="text" name="compañia" placeholder="Compañia: " required>
+									<input style="color: rgb(55, 52, 53);" type="text" name="company" placeholder="Compañia: " required>
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-12 form-group">
 									<input style="color: rgb(55, 52, 53);" type="text" name="apellido" placeholder="Nombres y Apellidos: " required>
@@ -1236,8 +1236,8 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 									
 								</div>
 							</form>
-								
 						</div>
+						<?php include("reclamaciones.php"); ?>
 						
 					</div>
 				</div>
@@ -1308,11 +1308,14 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 									<ul class="list">
 										<li><a target="_blank"  href="index.html">Inicio</a></li>
 										<li><a target="_blank" href="Quienes-somos.html">Quiénes somos </a></li>
-										<li><a target="_blank" href="https://trackingweb.andessystems.com.pe/login">Tracking ALG</a></li>
-										<li><a target="_blank" href="https://consulta-cpe.andessystems.com.pe/">Consulta tu factura</a></li>
-							
-														
-
+										<li class="alg-container">
+											<a class="alg-container-a1" target="_blank">Tracking ALG</a>
+											<ul class="alg-container-ul">
+												<li class="alg-container-li"><a class="alg-container-li-a" href="https://trackingweb.andessystems.com.pe/login">Tracking Carga</a></li>
+												<li class="alg-container-li"><a class="alg-container-li-a" href="https://www.softpad.com.pe/ClientesWeb/FrmIngresoUsuario?cod_inter">Tracking aduanas</a></li>	
+											</ul>
+										</li>
+										<li class="alg-container-consulta"><a target="_blank" href="https://consulta-cpe.andessystems.com.pe/">Consulta tu factura</a></li>
 									</ul>
 									
 								</div>
@@ -1381,6 +1384,8 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 	
 </div>
 <!--End pagewrapper-->
+
+
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
