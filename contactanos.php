@@ -6,7 +6,7 @@ if(isset($_POST["submit-form"])) {
     $phone=$_POST["phone"];
     $message=$_POST["message"];
 
-    $destinatario = "cesarti2022@gmail.com";
+    $destinatario = "contacto@algperu.com";
     $asunto = "Mensaje from: CONTACTANOS";
 
     $contenido="Nombres y Apellidos: $nombres \n";

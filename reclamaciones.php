@@ -11,7 +11,7 @@ if(isset($_POST["submit-form"])){
     $distrito=$_POST["distrito"];
     $texto=$_POST["obs"];
     
-    $destinatario="cesarti2022@gmail.com";
+    $destinatario="contacto@algperu.com";
     $asunto="Mensaje from: LIBRO DE RECLAMACIONES";
 
     $contenido="Solicitud: $solicitud \n"; 
