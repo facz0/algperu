@@ -10,6 +10,16 @@ if(isset($_POST["submit-form"])){
     $provincia=$_POST["provincia"];
     $distrito=$_POST["distrito"];
     $texto=$_POST["obs"];
+
+    $ip = $_SERVER["REMOTE_ADDR"];  // Obtener la IP del visitante
+    $captcha = $_POST["g-recaptcha-response"];
+    $secretkey = "6Ldfb3UpAAAAACTSqfMarTTWqX8oyRFb0ZH6MUzW";
+
+    $respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&respuesta=$captcha&remoteip=$ip");
+    $atributos = json_decode($respuesta, TRUE);
+
+    
+
     
     $destinatario="contacto@algperu.com";
     $asunto="Mensaje from: LIBRO DE RECLAMACIONES";
@@ -23,7 +33,7 @@ if(isset($_POST["submit-form"])){
     $contenido.="Dirección: $adress \n";
     $contenido.="Provincia: $provincia \n";
     $contenido.="Distrito: $distrito \n";
-    $contenido.="Observaciones: $texto";
+    $contenido.="Observaciones: $texto"; 
 
     $header="From: Libro de Reclamaciones ALGPeru";
 
@@ -34,6 +44,7 @@ if(isset($_POST["submit-form"])){
     } else{
         echo "<script>alert('El correo no se envió');</script>";
     }
+
 }
 
 ?>
