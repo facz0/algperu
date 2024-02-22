@@ -1744,7 +1744,7 @@ img{
 	position:absolute;
 	left:-30px;
 	top:100%;
-	width:240px;
+	width:250px;
 	z-index:100;
 	display:none;
 	opacity: 0;
@@ -1792,7 +1792,7 @@ img{
 	line-height:24px;
 	font-weight:400;
 	font-size:15px;
-	text-transform:capitalize;
+	/* text-transform:capitalize; */
 	color:#7c7b7b;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
@@ -1875,7 +1875,7 @@ img{
 	line-height:24px;
 	font-weight:400;
 	font-size:15px;
-	text-transform:capitalize;
+	/* text-transform:capitalize; */
 	color:#7c7b7b;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
