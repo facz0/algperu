@@ -15,13 +15,18 @@ if(isset($_POST["submit-form"])){
     $captcha = $_POST["g-recaptcha-response"];
     $secretkey = "6Ldfb3UpAAAAACTSqfMarTTWqX8oyRFb0ZH6MUzW";
 
-    $respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&respuesta=$captcha&remoteip=$ip");
-    $atributos = json_decode($respuesta, TRUE);
+    // $respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret='.$secretkey.'&respuesta=$captcha&remoteip=$ip");
+    $response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secretkey . '&response=' . $captcha);
+    $atributos = json_decode($response, TRUE);
+
+    if(!$atributos['succes']){
+        echo "<script>alert('Por favor llenar recaptcha');window.location='Libro-de-reclamaciones.html';</script>";
+    } else{
+        echo "<script>alert('Por favor llenar recaptcha');window.location='Libro-de-reclamaciones.html';</script>";
+    }
 
     
-
-    
-    $destinatario="contacto@algperu.com";
+    $destinatario="cesarti2022@gmail.com";
     $asunto="Mensaje from: LIBRO DE RECLAMACIONES";
 
     $contenido="Solicitud: $solicitud \n"; 
